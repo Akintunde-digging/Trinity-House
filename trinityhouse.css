@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sacramento&display=swap');
+*, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  *::-webkit-scrollbar {
+    display: none; 
+  }
+    html{
+    font-family: 'merriweather', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    }
+    body{
+
+    }
+    section{
+        padding: 50px 10px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    a:hover{
+        color: blue;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    nav a{
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    nav a:hover{
+        color: blue;
+    }
+    nav.scrolled{
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav.scrolled a{
+    color: black;
+    }
+    nav.scrolled a:hover{
+        color: blue;
+    }
+    ul{ 
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap:20px;
+    }
+    .home-contact{
+        display: none;
+    }
+    .home-contact.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 200px;
+        width: fit-content;
+        background-color: #1c1c1c;
+        padding: 20px;
+        border-bottom: 1px solid rgba(139, 139, 139, 0.096);
+    }
+    .home-contact.active ul {
+    flex-direction: column;
+    gap: 15px;
+    }
+    nav button{
+        display: none;
+    }
+    nav .logo{
+        padding-right: 140px;
+    }
+    .fib{
+        display: flex;
+        font-size: 25px;
+        gap: 15px;
+        color: white;
+        transition: color 0.3s ease;
+    }
+    nav.scrolled .fib{
+    color: black;
+    }
+    .nav-right{
+        font-size: 40px;
+        color: white;
+        transition: color 0.3s ease;
+    }
+    nav.scrolled .nav-right{
+    color: black;
+    }
+    .hero_section{
+        text-align: center;
+        min-height: 100dvh;
+        padding: 0;
+        color: white;
+    }
+    .hero_section h1{
+        font-family: 'playfair display';
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+        color: white;
+    }
+    .hero_section p{
+        font-family: allura;
+        font-size: 30px;
+        padding-top: 20px;
+        color: white;
+    }
+    .join_us{
+        padding-top: 45px;
+    }
+    .hero_section button{
+        padding: 18px;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-weight: 600;
+    }
+    .hero{
+        width: 100%;
+        height: 100%;
+    }
+    .slides{
+        display: flex;
+        transition: transform 0.5s ease;
+        position: relative;
+    }
+    .slide{
+        min-width: 100%;
+        display: none;
+        position: relative;
+    }
+    .slide.active{
+        display: block;
+    }
+    .hero_section img{
+        width: 100%;
+        height: 100%;
+        min-height: 100dvh;
+        object-fit: cover;
+    }
+    .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    padding-top: 200px;
+    }
+    .servicesTime{
+        display: flex;
+        gap: 35px;
+        padding: 30px 0;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    .servicesTime p{
+        color: black;
+        font-size: 20px;
+        padding: 8px;
+        background-color: white;
+        display: inline-block;
+        
+    }
+    .servicesTime h2{
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .givingAndPayment{
+        background-color: black;
+        color: white;
+    }
+    .giving{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+    .giving button{
+        padding: 15px;
+        border: none;
+        background-color: orange;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    .giving p{
+        font-size: 30px;
+    }
+    .giving span{
+        display: none;
+    }
+    .whoWeAre{
+
+    }
+    .whoAndImage{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5px;
+        gap: 50px;
+    }
+    .who{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .who .whoFP{
+        background-color: black;
+        color: white;
+        width: fit-content;
+        padding: 5px 12px;
+    }
+    .who h2{
+        font-size: 26px;
+    }
+    .who .whoSP{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    .who button{
+        border: none;
+        padding: 15px;
+        background-color: blue;
+        color: white;
+        font-weight: 600;
+    }
+    .prayingHandImage{
+        display: flex;
+        width: 100%;
+        height: 400px;
+        padding: 0 10px;
+    }
+    .prayingHandImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .mvvSection{
+        padding: 40px;
+    }
+    .mvv{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 40px  40px;
+    }
+    .mission, .vision, .values{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .mvv p{
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .pastor{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pastor p{
+        font-size: 13px;
+        background-color: black;
+        color: white;
+        width: fit-content;
+        padding: 6px;
+    }
+    .pastor h2{
+        font-size: 30px;
+    }
+    .pastorImage{
+        width: 90%;
+        height: 438px;
+        margin: 0 auto;
+    }
+    .pastorImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 20px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .socials{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 30px;
+    }
+    
+
+     @media (min-width: 768px){
+        nav{
+            padding: 10px 20px;
+        }
+        nav .logo{
+            padding-right: 40px;
+        }
+        .home-contact{
+            display: flex;
+        }
+        ul{
+            gap: 30px;
+        }
+        .nav-right{
+            display: none;
+        }
+        nav button{
+            display: flex;
+        }
+        .fib{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .hero_section{
+            min-height: 100vh;
+        }
+        .hero_section img{
+            min-height: 110vh;
+        }
+        .overlay{
+            padding-top: 220px;
+        }
+        .titheOfferingButton button{
+            padding: 15px;
+            border: none;
+            background-color: orange;
+            border-radius: 3px;
+        }
+        .mobileSocials .fa-brands{
+            display: none;
+        }
+        .hero_section h1{
+            font-size: 70px;
+        }
+        .giving{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .giving span{
+            display:inline;
+        }
+        .whoAndImage{
+            flex-direction: row-reverse;
+            width: 100%;
+            gap: 100px;
+        }
+        .who, .prayingHandImage{
+            width: calc(100%/2);
+        }
+        .who h2{
+            font-size: 50px;
+            line-height: 1;
+            padding-bottom: 30px;
+        }
+        .who{
+            gap: 35px;
+            padding-top: 100px;
+        }
+        .who .whoSP{
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .who button{
+            font-size: 18px;
+            padding: 16px 25px;
+        }
+        .prayingHandImage{
+            height: 120vh;
+        }
+        .prayingHandImage img{
+            object-position: left;
+        }
+        .mvv{
+            flex-direction: row;
+            padding: 90px 40px;
+        }
+        .mvv h3{
+            font-size: 30px;
+        }
+        .mvv p{
+            font-size: 18px;
+        }
+        .pastor h2{
+            font-size: 60px;
+        }
+        .pastorImage{
+            height: 150vh;
+        }
+     }

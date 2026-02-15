@@ -213,6 +213,7 @@
         background-color: orange;
         border-radius: 5px;
         font-weight: 600;
+        color: black;
     }
     .giving p{
         font-size: 30px;
@@ -422,10 +423,19 @@
         .mvv p{
             font-size: 18px;
         }
+        .pastor{
+            gap: 40px;
+        }
         .pastor h2{
             font-size: 60px;
         }
         .pastorImage{
             height: 150vh;
+            width: 70%;
+        }
+        .footer{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 30px;
         }
      }
